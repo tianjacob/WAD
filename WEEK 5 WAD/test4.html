@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKN Manado</title>
+</head>
+<body>
+    <h1>JavaScript can validate input</h1>
+    <p>Please input a number between 1 to 50:</p>
+    <input id="numb" type="number">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function  myFunction() {
+            var x, text;
+            // get the value of the input field with id="numb"
+            x = document.getElementById("numb").value;
+            // if x is Not a Number or less than one or greater than 50
+            if (isNaN(x) || x < 1 || x > 50) {
+                text = "input not valid";
+            } else {
+                text = "input OK";
+            }
+            document.getElementById("demo").innerHTML = text;
+
+        }
+    </script>
+</body>
+</html>
